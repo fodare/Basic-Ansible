@@ -1,0 +1,10 @@
+---
+- hosts: qa
+  become: true
+  tasks:
+     - yum:
+          name:
+             - httpd
+          state: present
+     - service: name=httpd state=started enabled=yes
+     - raw: "echo QA server says hello! | sudo tee /var/www/html/index.html"

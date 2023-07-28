@@ -1,0 +1,8 @@
+# VS code files
+.vscode
+
+# Terraform configs
+.terraform
+.terraform.*
+*.tfstate
+*.tfstate.*

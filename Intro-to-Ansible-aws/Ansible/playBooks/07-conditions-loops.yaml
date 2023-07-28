@@ -1,0 +1,16 @@
+---
+- hosts: qa
+  vars:
+     system: "Linux"
+     day: "Monday"
+  tasks:
+     #  - name: Conditions and Loops
+     #    debug: var=hostvars
+     - debug: var=ansible_system
+     - debug: var=day
+       when: system == "Linux"
+     - debug: var=dockerContainer
+       with_items:
+          - container1
+          - container2
+          - container3

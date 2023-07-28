@@ -1,0 +1,9 @@
+# required for all azure_rm inventory plugin configs
+plugin: azure.azcollection.azure_rm
+
+# fetches VMs from an explicit list of resource groups instead of default all (- '*')
+include_vm_resource_groups:
+- test-rg
+auth_source: auto
+conditional_groups:
+  DEV: "'test' in name"

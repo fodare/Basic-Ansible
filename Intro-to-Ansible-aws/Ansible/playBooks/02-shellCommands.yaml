@@ -1,0 +1,7 @@
+---
+- hosts: dev
+  tasks:
+     - name: Execute shell commands
+       shell: python  --version # Execute a shell command
+       register: uname_result # Capture it result in a register
+     - debug: msg="{{uname_result.stderr}}" # print the result in the ansible console

@@ -1,0 +1,16 @@
+---
+- hosts: DEV
+  tasks:
+     - name: Ping server
+       action: ping
+     - debug: msg="Server says hello"
+
+     - name: Fetch uname
+       shell: uname
+       register: uname_result
+     - debug: msg="Server username-{{uname_result.stdout_lines}}"
+
+     - name: Fetch python version
+       shell: python --version
+       register: python_version
+     - debug: msg="Python version-{{python_version.stderr_lines}}"

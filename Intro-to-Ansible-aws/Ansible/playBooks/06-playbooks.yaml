@@ -1,0 +1,5 @@
+- ansible.builtin.import_playbook: 01-ping.yaml
+- ansible.builtin.import_playbook: 02-shellCommands.yaml
+- ansible.builtin.import_playbook: 03-variables.yaml
+# - ansible.builtin.import_playbook: 04-ansible-facts.yaml
+# - ansible.builtin.import_playbook: 05-install-apache.yaml
